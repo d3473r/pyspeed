@@ -1,0 +1,15 @@
+{
+  "speed_file": "speed.json",
+  "html_file": "html/index.html",
+  "download": {
+    "target": 100,
+    "color": "rgb(39, 144, 176)"
+  },
+  "upload": {
+    "target": 40,
+    "color": "rgb(176, 42, 59)"
+  },
+  "ping": {
+    "color": "rgb(148, 186, 101)"
+  }
+}

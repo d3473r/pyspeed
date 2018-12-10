@@ -1,0 +1,116 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "speed_file",
+    "html_file",
+    "download",
+    "upload",
+    "ping"
+  ],
+  "properties": {
+    "speed_file": {
+      "$id": "#/properties/speed_file",
+      "type": "string",
+      "title": "The Speed_file Schema",
+      "default": "",
+      "examples": [
+        "speed.json"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "html_file": {
+      "$id": "#/properties/html_file",
+      "type": "string",
+      "title": "The Html_file Schema",
+      "default": "",
+      "examples": [
+        "html/index.html"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "download": {
+      "$id": "#/properties/download",
+      "type": "object",
+      "title": "The Download Schema",
+      "required": [
+        "target",
+        "color"
+      ],
+      "properties": {
+        "target": {
+          "$id": "#/properties/download/properties/target",
+          "type": "integer",
+          "title": "The Target Schema",
+          "default": 0,
+          "examples": [
+            100
+          ]
+        },
+        "color": {
+          "$id": "#/properties/download/properties/color",
+          "type": "string",
+          "title": "The Color Schema",
+          "default": "",
+          "examples": [
+            "rgb(39, 144, 176)"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "upload": {
+      "$id": "#/properties/upload",
+      "type": "object",
+      "title": "The Upload Schema",
+      "required": [
+        "target",
+        "color"
+      ],
+      "properties": {
+        "target": {
+          "$id": "#/properties/upload/properties/target",
+          "type": "integer",
+          "title": "The Target Schema",
+          "default": 0,
+          "examples": [
+            40
+          ]
+        },
+        "color": {
+          "$id": "#/properties/upload/properties/color",
+          "type": "string",
+          "title": "The Color Schema",
+          "default": "",
+          "examples": [
+            "rgb(176, 42, 59)"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "ping": {
+      "$id": "#/properties/ping",
+      "type": "object",
+      "title": "The Ping Schema",
+      "required": [
+        "color"
+      ],
+      "properties": {
+        "color": {
+          "$id": "#/properties/ping/properties/color",
+          "type": "string",
+          "title": "The Color Schema",
+          "default": "",
+          "examples": [
+            "rgb(148, 186, 101)"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    }
+  }
+}
